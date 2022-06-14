@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://releases.jquery.com/git/ui/jquery-ui-git.css">
+    <title>Tooltip JQ</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <title>jQuery</title>
+</head>
+
+<body>
+    <center>
+        <h1 id="clock">Placeholder Jam</h1>
+        <br>
+        <button id="start">Start/Stop</button>
+    </center>
+    <script>
+        $(function () {
+            $('#start').click(function () {
+                $('#clock').toggleClass('show');
+
+                setInterval(function () {
+                    if ($('#clock').attr('class') === 'show') {
+                        var date = new Date();
+                        var day = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum\'at', 'Sabtu'];
+                        var month = ('Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember');
+                        month = month.split(" ");
+                        $('#clock').html(day[date.getDay()]+ ', ' + date.getDate() + ' ' + month[date.getMonth()] + ' ' + date.getFullYear() + '<br>' + date.toLocaleTimeString('en-GB'));}
+                    else {
+                        $('#clock').html('Placeholder Jam');
+                    };
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

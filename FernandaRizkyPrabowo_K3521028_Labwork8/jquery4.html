@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://releases.jquery.com/git/ui/jquery-ui-git.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <label for="tags">Pilih Tag</label>
+    <input type="text" name="tag" id="tags">
+    <script type="text/javascript">
+        var tags = [
+            "AngularJs",
+            "ReactJs",
+            "VueJs",
+            "NodeJs",
+            "TypeScript",
+            "Ionic",
+            "JQuery"
+        ];
+
+        $(function () {
+            $('#tags').autocomplete({
+                source : tags
+            });
+        });
+    </script>
+
+</body>
+
+</html>

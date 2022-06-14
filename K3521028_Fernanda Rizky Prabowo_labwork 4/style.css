@@ -1,0 +1,45 @@
+h1{
+    color: blue;
+    text-align: center;
+    font-family: sans-serif;
+    text-shadow: 2px 2px #555;
+}
+
+.div1{
+    margin: 10px 15px;
+    padding: 5px;
+    background: cyan;
+    border-radius: 10px 15px;
+}
+
+.div2{
+    margin: 10px 15px;
+    padding: 10px;
+    background: #ecfa91;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 12px;
+    border-radius: 15px
+}
+
+.div3{
+    margin: 10px; padding: 0 10px; background: #90e07e; grid-column: 1 / span 3;
+}
+
+ul{
+    list-style-type: none; padding: 10px;
+}
+
+li{
+    margin: 10px 0;
+    background: green;
+    padding: 10px;
+}
+
+.div4{
+    margin: 10px; padding: 0 10px; background: #90e07e; grid-column: 4 / span 9;
+}
+
+p{
+    color: #0b872c;
+}
